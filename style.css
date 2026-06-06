@@ -1,0 +1,79 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        /* Animated Dark Green Background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(-45deg, #022c22, #064e3b, #065f46, #022c22);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #ecfdf5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(2, 44, 34, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        /* Custom Scrollbar for Chat */
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .chat-container::-webkit-scrollbar-thumb {
+            background-color: rgba(16, 185, 129, 0.5);
+            border-radius: 10px;
+        }
+
+        /* Markdown Styles for Dark Theme */
+        .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+            font-weight: 700;
+            color: #6ee7b7;
+            margin-top: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+        .markdown-body h3 { font-size: 1.1rem; }
+        .markdown-body ul {
+            list-style-type: none;
+            margin-left: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .markdown-body p { margin-bottom: 0.75rem; line-height: 1.6; color: #d1fae5; }
+        .markdown-body strong { color: #34d399; font-weight: 600; }
+        .markdown-body em { color: #a7f3d0; font-style: italic; }
+
+        /* Slow Scrolling Ticker */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(2, 44, 34, 0.8);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 8px 0;
+            white-space: nowrap;
+        }
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 35s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Slideshow Transitions */
+        .slide, .ad-slide {
+            transition: opacity 1s ease-in-out;
+        }
+    
